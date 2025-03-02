@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDR Deposit Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>FDR Deposit Calculator</h2>
+
+        <!-- Interest Rate Input -->
+        <label for="interestRate">Interest Rate (%)</label>
+        <input type="number" id="interestRate" placeholder="Enter interest rate">
+
+        <!-- Amount Input -->
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" placeholder="Enter amount">
+        <p class="note">Amount in words: <span id="amountWords">Zero</span></p>
+
+        <!-- Tenure Selection -->
+        <label for="tenure">Select Tenure</label>
+        <select id="tenure">
+            <option value="1">1 Month</option>
+            <option value="2">2 Months</option>
+            <option value="3">3 Months</option>
+            <option value="6">6 Months</option>
+            <option value="12">1 Year</option>
+            <option value="24">2 Years</option>
+            <option value="36">3 Years</option>
+        </select>
+
+        <!-- TIN Selection -->
+        <label for="tin">Do you have a TIN?</label>
+        <select id="tin">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <!-- Calculate Button -->
+        <button>Calculate</button>
+
+        <!-- Result Display -->
+        <div class="result">
+            <p>Profit Before Tax: <span id="profitBefore">0.00</span></p>
+            <p>Profit After <span id="taxDeductionLabel">10%</span> Deduction: <span id="profitAfter">0.00</span></p>
+        </div>
+    </div>
+
+    <!-- Link to External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
